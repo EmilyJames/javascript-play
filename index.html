@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Practice</title>
+</head>
+<body>
+
+	<p id="one"></p>
+	
+	<script>
+
+	//EXAMPLE OF SCOPE: *******************************************
+		// // Local vs Global scope:
+
+		// //example of variable with Global scope here:
+		// var aGlobal = "This is a global";
+		
+		// function newFunction (){
+		// 	//example of Local variable (written within a function)
+		// 	var aLocal = "A local variable";
+
+		// 	console.log(aLocal);
+
+		// }
+
+		// console.log(aGlobal);
+
+		// //invoking function here:
+		// newFunction();
+
+		//*******************************************************
+
+
+
+
+
+		//IF ELSE STATEMENTS: ***********************************
+
+		// var luckyNum = 4;
+		// var yourNum = 13;
+
+		// if(luckyNum === yourNum){
+		// 	alert("It's your lucky day!!");
+		// } else {
+		// 	alert("Sorry, you lose.");
+		// }
+
+
+		//Ternary Operator example:
+		// var luckyNum = 4;
+		// var yourNum = 13;
+
+		// (luckyNum === yourNum) ? alert("It's your lucky day!") : alert("Sorry, you lose.");
+
+
+
+		// //Choose a number between 1 and 10!
+
+		// //creating new function (declaration):
+		// function bingoGame () {
+
+		// 	//declaring variables:
+		// 	var yourNum = 4;
+		// 	var bingoNum = Math.floor((Math.random() * 10) + 1);
+	
+		// 	//Ternary conditional if else statement:
+		// 	(yourNum === bingoNum) ? alert("It's your lucky day!") : alert("Sorry, you lose.");
+		// }
+
+		// //invoking the function (can be anywhere coz it's a declaration):
+		// bingoGame();
+
+
+
+
+
+		//Choose a number between 1 and 10!
+
+		//creating new function (declaration):
+		function bingoGame () {
+
+			//declaring variables:
+			var message ;
+			var yourNum = 4;
+			var bingoNum = Math.floor((Math.random() * 10) + 1);
+	
+			//Ternary conditional if else statement:
+			(yourNum === bingoNum) ? message = "It's your lucky day!" : message = "You got " + bingoNum + "! " + "Please try again." ;
+
+			//adding text to an element in the DOM:
+			var getPara = document.getElementById("one");
+			getPara.textContent = message;
+
+		}
+
+		//invoking the function (can be anywhere coz it's a declaration):
+		bingoGame();
+
+
+
+	</script>
+
+
+
+
+
+
+</body>
+</html>
